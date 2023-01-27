@@ -38,10 +38,10 @@ function onClick(event) {
     `<img src="${source}" width="800" height="600">`,
     {
       onShow: (instance) => {
-        window.addEventListener("keydown", onEscKeyPress);
+        document.addEventListener("keyup", onEscKeyPress);
       },
       onClose: (instance) => {
-        window.removeEventListener("keydown", onEscKeyPress);
+        document.removeEventListener("keyup", onEscKeyPress);
       },
     }
   );
@@ -55,9 +55,3 @@ function onClick(event) {
     }
   }
 }
-// onShow: (instance) => {
-//   document.addEventListener("keyup", onCEscKeyPress);
-// },
-// onClose: (instance) => {
-//   document.removeEventListener("keyup", onCEscKeyPress);
-// },
